@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&family=Poppins:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif
+}
+
+body {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 70px;
+    align-items: center;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    
+    position:fixed;
+    top:0;
+    width: 100%;
+}
+
+.navbar-container .logo-container a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+}
+
+.navbar-container .nav-items {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    align-items: center;
+}
+
+.navbar-container .nav-items .nav-link a {
+    color: #fff;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+
+
+/* Now lets style the content of this design */
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    justify-content: space-between;
+
+} 
+.col-1{
+  flex-basis: 50%;
+  min-width:300px;
+  margin-bottom: 40px;
+
+}
+.col-2{
+  flex-basis: 45%;
+  min-width:200px;
+  margin-bottom: 30px;
+  color: rgb(19, 17, 17);
+  
+ 
+} 
+.col-2 h1{
+
+font-size: 58px;
+font-weight: 650;
+} 
+.col-1 img{ 
+      width: 100%;
+     
+        
+}
+.col-2 p{
+  font-size: 23px;
+  font-weight: 200;
+}
+span{
+  color: red;
+}
+
+.buttonBox{
+    margin: 0 20px 40px;
+    position: absolute;
+    max-width: 300px;
+    min-width: 200px;
+    padding-left: 12%;
+    border-radius: 5px;
+    flex: 10%;
+}
+  
+  button{
+    width:100%;
+    height: 80px;
+    position: absolute;
+    border-radius: 30px;
+    background: #36D1DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    text-transform:uppercase;
+    color:white;
+    font-weight:700;
+    letter-spacing:1px;
+    border:none;
+    font-size:15px;
+    outline:none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    cursor: pointer;
+  }
+  #ninth>button{
+    transition:all .5s ease-in-out;
+  }
+  
+  #ninth:hover button{
+    background:white;
+    color:#ff9292;
+  }  
+ 
+
+/* Adjustment for ipad screens */
+
+@media(max-width: 1000px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-container .nav-items {
+        gap: 0.1rem;
+    }
+
+    .navbar-container .nav-items .nav-link a, .navbar-container .nav-items .login-register .button {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* adjustment for mobile phones */
+
+@media(max-width: 700px) {
+    .navbar-container .nav-items {
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        width: 100vw;
+        background: rgb(35, 29, 53);
+        padding: 1rem 0;
+        height: 100vh;
+        z-index: 99;
+        right: -100%; 
+        transition: 0.2s ease-in;
+        -webkit-transition: 0.2s ease-in;
+        -moz-transition: 0.2s ease-in;
+        -ms-transition: 0.2s ease-in;
+        -o-transition: 0.2s ease-in;
+}
+
+.bars {
+    height: auto;
+    width: 22px;
+    cursor: pointer;
+}
+
+.bars .bar {
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    margin: 4px;
+}
+
+.navbar-container .nav-items {
+    gap: 3rem;
+}
+
+.navbar-container .nav-items .login-register {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 50%;
+}
+
+.navbar-container .nav-items .login-register .button {
+    padding: 1rem 0;
+}
+
+.main {
+    font-size: 2rem;
+}
+}
+
+
+.navbar-container .nav-items.active {
+    right: 0;
+}
+
